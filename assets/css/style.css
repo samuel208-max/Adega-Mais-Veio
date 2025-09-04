@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --cor-primaria: rgb(19, 17, 17);
+    --fonte-primaria: rgb(185, 185, 184);
+}
+
+/* ======================== HEADER ====================== */
+#cabecalho {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    background-color: var(--cor-primaria);
+    color: var(--fonte-primaria);
+}
+
+#cabecalho a {
+    text-decoration: none;
+    color: var(--fonte-primaria);
+}
+
+#cabecalho ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 23px;
+}
+
+/* Estiliza os itens da lista dentro de #cabecalho */
+#cabecalho #lista li {
+    position: relative;
+    /* Necessário para posicionar o ::after em relação ao li */
+    display: inline-block;
+    /* Permite que o elemento tenha largura apenas do conteúdo */
+    overflow: hidden;
+    /* Garante que o ::after não ultrapasse o limite do li */
+}
+
+/* Cria a linha decorativa que será animada */
+#cabecalho #lista li::after {
+    content: "";
+    /* Cria um elemento vazio visualmente */
+    position: absolute;
+    /* Permite posicionar a linha com bottom/left */
+    bottom: 0;
+    /* Alinha a linha ao fundo do item */
+    left: 50%;
+    /* Começa no meio horizontal do item */
+    width: 100%;
+    /* A linha pode cobrir toda a largura do item */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: rgb(114, 111, 111);
+    /* Cor da linha */
+    transform: translateX(-50%) scaleX(0);
+    /* Centraliza a linha e a esconde (largura 0) */
+    transform-origin: center;
+    /* A animação se expande a partir do centro */
+    transition: transform 0.3s ease;
+    /* Animação suave da transformação */
+}
+
+#cabecalho ul li:hover {
+    transform: scale(1.09);
+    /* Aplica um leve zoom no texto ao passar o mouse */
+}
+
+/* Quando o mouse passa por cima do li, anima a linha */
+#cabecalho #lista li:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Expande a linha dos 0% até 100% a partir do centro */
+}
+
+
+#lista-carrinho {
+    padding-right: 100px;
+}
+
+#lista-carrinho li {
+    cursor: pointer;
+}
+
+/* ======================== FIM DO HEADER ====================== */
+
+/* ======================== BANNER ======================= */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.awsli.com.br/600x450/572/572835/produto/209583011/screenshot-produto-mercadolivre-com-br-2020-04_clipped_rev_2-fpzlnt.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+
+}
+
+#hero div {
+    width: 40%;
+    margin: 0 auto;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#hero div h1 {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+#hero div p {
+    font-size: 20px;
+}
+
+#hero div a {
+    text-decoration: none;
+    color: black;
+    background-color: cornsilk;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: max-content;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+#hero div a:hover {
+    transform: scale(1.1);
+}
+
+/* ======================== FIM DO BANNER ======================= */
+
+/* ======================== COMEÇO DA SECTION DESTAQUES CARDAPIO =========================== */
+#destaquesCardapio {
+    padding: 100px 0;
+    background-color: rgb(10, 9, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#destaquesCardapio #escolhaDestaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+#destaquesCardapio #escolhaDestaques h1 {
+    font-size: 40px;
+    color: rgb(114, 81, 38);
+}
+
+#destaquesCardapio #escolhaDestaques ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+#destaquesCardapio #escolhaDestaques button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(114, 81, 38);
+    border-bottom: 1px solid rgb(114, 81, 38);
+    background-color: transparent;
+    font-size: 20px;
+}
+
+#destaquesCardapio .exibicaoProdutos {
+    display: flex;
+    justify-content: center;
+}
+
+#destaquesCardapio .exibicaoProdutos ul {
+    display: flex;
+    gap: 50px;
+}
+
+.box {
+    background-color: var(--cor-primaria);
+    color: var(--fonte-primaria);
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.box div {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.box div h1 {
+    font-weight: 500;
+}
+
+.box div p {
+    font-size: 20px;
+}
+
+.box div h3 {
+    font-size: 23px;
+}
+
+.box button {
+    background-color: rgb(209, 172, 69);
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 20px;
+    width: 85%;
+    font-size: 20px;
+    padding: 7px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+#destaquesCardapio a {
+    color: rgb(148, 91, 17);
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+}
