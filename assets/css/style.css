@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -157,7 +161,7 @@ body {
 
 #destaquesCardapio #escolhaDestaques h1 {
     font-size: 40px;
-    color: rgb(114, 81, 38);
+    color: #ff982d;
 }
 
 #destaquesCardapio #escolhaDestaques ul {
@@ -170,7 +174,7 @@ body {
     border: none;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    color: rgb(114, 81, 38);
+    color: #ff982d;
     border-bottom: 1px solid rgb(114, 81, 38);
     background-color: transparent;
     font-size: 20px;
@@ -187,7 +191,7 @@ body {
 }
 
 .box {
-    background-color: var(--cor-primaria);
+    background-color: #ede7e7;
     color: var(--fonte-primaria);
     border-radius: 10px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
@@ -208,18 +212,23 @@ body {
 
 .box div h1 {
     font-weight: 500;
+    color: #000;
 }
 
 .box div p {
     font-size: 20px;
+    color: #7e7b7b;
 }
 
 .box div h3 {
     font-size: 23px;
+    color: #000;
 }
 
 .box button {
-    background-color: rgb(209, 172, 69);
+    background-color: #ff982d;
+    color: #000;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
     margin: 20px 20px;
     width: 85%;
@@ -230,10 +239,212 @@ body {
 }
 
 #destaquesCardapio a {
-    color: rgb(148, 91, 17);
+    color: #ff982d;
     margin-top: 50px;
     font-size: 22px;
     font-weight: 600;
     text-decoration: none;
     align-items: center;
 }
+
+#destaquesCardapio a:hover {
+    text-decoration: underline;
+    color: rgb(185, 119, 26);
+}
+
+/* ======================== FIM DA SECTION DESTAQUES CARDAPIO =========================== */
+
+/* ======================== COMEÇO DA SECTION NOSSO ESPAÇO =========================== */
+.nossoEspaco {
+    padding: 100px 0;
+    background-color: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.nossoEspaco h1 {
+    font-size: 40px;
+    color: #ff982d;
+}
+
+#boxNossoEspaco {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+#boxNossoEspaco img {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    width: 500px;
+    height: 400px;
+}
+
+#boxNossoEspaco div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+#boxNossoEspaco div p {
+    font-size: 25px;
+    color: #f0e5e5;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#boxNossoEspaco div button {
+    width: max-content;
+    padding: 10px 25px;
+    font-size: 24px;
+    border-radius: 30px;
+    background-color: #ff982d;
+    color: rgb(29, 28, 26);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#boxNossoEspaco div button:hover {
+    transform: scale(1.1);
+}
+
+/* ======================== FIM DA SECTION NOSSO ESPAÇO =========================== */
+
+/* ======================== COMEÇO DA SECTION ALUGUEL DE NARGUILE =========================== */
+#aluguelNarguile {
+    padding: 100px 0;
+    background-color: rgb(10, 9, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+#aluguelNarguile h1 {
+    font-size: 40px;
+    color: #ff982d;
+}
+
+#aluguelNarguile p {
+    font-size: 22px;
+    color: #f0e5e5;
+    width: 60%;
+    line-height: 1.5;
+}
+
+#aluguelNarguile button {
+    width: max-content;
+    padding: 10px 25px;
+    font-size: 24px;
+    border-radius: 30px;
+    background-color: #ff982d;
+    color: rgb(29, 28, 26);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#aluguelNarguile button:hover {
+    transform: scale(1.1);
+}
+
+/* ======================== FIM DA SECTION ALUGUEL DE NARGUILE =========================== */
+
+/* ======================== COMEÇO DA SECTION CONTATO =========================== */
+#contato {
+    padding: 100px 0;
+    background-color: #2b2a2a;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+#contato h1 {
+    font-size: 40px;
+    color: #ff982d;
+}
+
+#tudoContato {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    margin-top: 40px;
+}
+
+#informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #f0e5e5;
+    font-size: 20px;
+    text-align: left;
+}
+
+#informacoes i {
+    font-size: 30px;
+    color: #ff982d;
+    background-color: rgb(29, 28, 26);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#informacoes .boxContato {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#campos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#campos div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #f0e5e5;
+    font-size: 20px;
+    text-align: left;
+}
+
+#campos input, #campos textarea {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+#campos input:focus, #campos textarea:focus {
+    outline: 2px solid #ff982d;
+}
+
+#campos button {
+    margin: 0 auto;
+    width: max-content;
+    padding: 10px 25px;
+    font-size: 24px;
+    border-radius: 30px;
+    background-color: #ff982d;
+    color: rgb(29, 28, 26);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#campos button:hover {
+    transform: scale(1.1);
+}
+/* ======================== FIM DA SECTION CONTATO =========================== */
