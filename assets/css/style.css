@@ -20,6 +20,11 @@ body {
 /* ======================== HEADER ====================== */
 #cabecalho {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
     padding: 30px 0;
     justify-content: space-around;
     background-color: var(--cor-primaria);
@@ -68,8 +73,9 @@ body {
     /* Centraliza a linha e a esconde (largura 0) */
     transform-origin: center;
     /* A animação se expande a partir do centro */
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     /* Animação suave da transformação */
+    box-shadow: 0 0 10px rgb(114, 111, 111);
 }
 
 #cabecalho ul li:hover {
@@ -227,6 +233,7 @@ body {
 
 .box button {
     background-color: #ff982d;
+    cursor: pointer;
     color: #000;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -238,6 +245,13 @@ body {
     border: none;
 }
 
+.box button:hover {
+    background-color: rgb(185, 119, 26);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, scale 0.3s ease;
+    scale: 1.05;
+}
+
 #destaquesCardapio a {
     color: #ff982d;
     margin-top: 50px;
@@ -245,6 +259,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     align-items: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 #destaquesCardapio a:hover {
@@ -313,6 +328,7 @@ body {
 
 #boxNossoEspaco div button:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px #ff982d;
 }
 
 /* ======================== FIM DA SECTION NOSSO ESPAÇO =========================== */
@@ -355,6 +371,7 @@ body {
 
 #aluguelNarguile button:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px #ff982d;
 }
 
 /* ======================== FIM DA SECTION ALUGUEL DE NARGUILE =========================== */
@@ -391,16 +408,49 @@ body {
 
 #informacoes i {
     font-size: 30px;
+    cursor: pointer;
     color: #ff982d;
     background-color: rgb(29, 28, 26);
     padding: 20px;
     border-radius: 50%;
 }
 
+#informacoes i:hover {
+    background-color: rgb(24, 23, 22);
+    transform: scale(1.2);
+    transition: color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgb(17, 17, 16);
+}
+
 #informacoes .boxContato {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+#informacoes .boxContato div h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+#informacoes .boxContato div p {
+    font-size: 18px;
+}
+
+#informacoes #enderecoContato div p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#informacoes #whatsappContato div p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#informacoes #emailContato div p:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #campos {
@@ -418,7 +468,8 @@ body {
     text-align: left;
 }
 
-#campos input, #campos textarea {
+#campos input,
+#campos textarea {
     width: 400px;
     padding: 10px;
     border-radius: 10px;
@@ -426,8 +477,11 @@ body {
     font-size: 18px;
 }
 
-#campos input:focus, #campos textarea:focus {
-    outline: 2px solid #ff982d;
+#campos input:focus,
+#campos textarea:focus {
+    outline: 1px solid #ff982d;
+    box-shadow: 0 0 10px #ff982d;
+    transition: box-shadow 0.3s ease, outline 0.3s ease;
 }
 
 #campos button {
@@ -441,10 +495,94 @@ body {
     font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 #campos button:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px #ff982d;
 }
+
 /* ======================== FIM DA SECTION CONTATO =========================== */
+
+/* ======================== COMEÇO DO FOOTER =========================== */
+#rodape {
+    background-color: #7c7878;
+    color: rgb(29, 28, 26);
+    text-align: center;
+    padding-top: 50px;
+}
+
+#tudoRodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#tudoRodape div {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+#tudoRodape #sobreRodape p {
+    text-align: justify;
+    width: 60%;
+}
+
+#tudoRodape div h2 {
+    font-size: 22px;
+}
+
+#tudoRodape div #redesSociais {
+    display: flex !important;
+    list-style: none;
+    gap: 30px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#tudoRodape #sobreRodape #redesSociais i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#tudoRodape #sobreRodape #redesSociais i:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.2);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#tudoRodape div .LinksSuporte {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#tudoRodape div ul li a {
+    text-decoration: none;
+    color: rgb(29, 28, 26);
+    transition: color 0.3s ease;
+}
+
+#tudoRodape div ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+hr {
+    margin-top: 30px;
+    border: 0.5px solid rgb(29, 28, 26);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Copyright {
+    padding: 30px;
+    font-size: 16px;
+}
