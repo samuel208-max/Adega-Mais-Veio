@@ -101,7 +101,7 @@ body {
 /* ======================== FIM DO HEADER ====================== */
 
 /* ======================== BANNER ======================= */
-#hero {
+.hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.awsli.com.br/600x450/572/572835/produto/209583011/screenshot-produto-mercadolivre-com-br-2020-04_clipped_rev_2-fpzlnt.jpg);
     background-position: center;
     background-size: cover;
@@ -111,7 +111,7 @@ body {
 
 }
 
-#hero div {
+.hero div {
     width: 40%;
     margin: 0 auto;
     color: aliceblue;
@@ -120,17 +120,17 @@ body {
     gap: 30px;
 }
 
-#hero div h1 {
+.hero div h1 {
     font-size: 45px;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
 
-#hero div p {
+.hero div p {
     font-size: 20px;
 }
 
-#hero div a {
+.hero div a {
     text-decoration: none;
     color: black;
     background-color: cornsilk;
@@ -142,7 +142,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-#hero div a:hover {
+.hero div a:hover {
     transform: scale(1.1);
 }
 
