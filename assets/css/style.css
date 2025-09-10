@@ -17,6 +17,7 @@ body {
     --fonte-primaria: rgb(185, 185, 184);
 }
 
+/* PÁGINA INICIAL */
 /* ======================== HEADER ====================== */
 #cabecalho {
     display: flex;
@@ -101,7 +102,7 @@ body {
 /* ======================== FIM DO HEADER ====================== */
 
 /* ======================== BANNER ======================= */
-.hero {
+#hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.awsli.com.br/600x450/572/572835/produto/209583011/screenshot-produto-mercadolivre-com-br-2020-04_clipped_rev_2-fpzlnt.jpg);
     background-position: center;
     background-size: cover;
@@ -111,7 +112,7 @@ body {
 
 }
 
-.hero div {
+#hero div {
     width: 40%;
     margin: 0 auto;
     color: aliceblue;
@@ -120,17 +121,17 @@ body {
     gap: 30px;
 }
 
-.hero div h1 {
+#hero div h1 {
     font-size: 45px;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
 
-.hero div p {
+#hero div p {
     font-size: 20px;
 }
 
-.hero div a {
+#hero div a {
     text-decoration: none;
     color: black;
     background-color: cornsilk;
@@ -142,7 +143,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.hero div a:hover {
+#hero div a:hover {
     transform: scale(1.1);
 }
 
@@ -585,4 +586,82 @@ hr {
 #Copyright {
     padding: 30px;
     font-size: 16px;
+}
+
+/* FIM DO CSS DA PÁGINA PRINCIPAL */
+
+
+/* ============================== PÁGINA "ESPAÇO" ==================== */
+
+#heroEspaco {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.awsli.com.br/600x450/572/572835/produto/209583011/screenshot-produto-mercadolivre-com-br-2020-04_clipped_rev_2-fpzlnt.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 120px;
+    text-align: center;
+    color: aliceblue;
+}
+
+#heroEspaco div h1 {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+#conhecaAdega {
+    padding: 80px 0;
+    background-color: rgb(10, 9, 9);
+}
+
+#conhecaAdega #conhecaTexto {
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conhecaAdega #conhecaTexto h1 {
+    font-size: 40px;
+}
+
+#conhecaAdega #conhecaTexto p {
+    font-size: 20px;
+}
+
+#conhecaAdega #imagens {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#conhecaAdega #imagens div {
+    display: flex;
+    gap: 0 30px;
+}
+
+#conhecaAdega #imagens img {
+    width: 355px;
+    height: 255px;
+    border-radius: 10px;
+}
+
+#conhecaAdega #cards {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    gap: 30px;
+}
+
+#conhecaAdega #cards .card {
+    background-color: #2b2a2a;
+    padding: 30px;
+    width: 20%;
+    text-align: center;
+}
+
+#conhecaAdega #cards .card p {
 }
