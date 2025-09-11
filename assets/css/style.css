@@ -657,11 +657,98 @@ hr {
 }
 
 #conhecaAdega #cards .card {
-    background-color: #2b2a2a;
+    background-color: #91969c;
     padding: 30px;
     width: 20%;
     text-align: center;
+    border-radius: 10px;
+}
+
+#conhecaAdega #cards .card i {
+    font-size: 50px;
+    color: rgb(29, 28, 26);
+    padding: 20px;
+}
+
+#conhecaAdega #cards .card h3 {
+    font-size: 27px;
+    margin: 15px 0;
 }
 
 #conhecaAdega #cards .card p {
+    font-size: 20px;
+}
+
+#ambienteAconchegante {
+    padding: 80px 0;
+    background-color: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+#ambienteAconchegante #ambienteTexto {
+    color: aliceblue;
+}
+
+#ambienteAconchegante #ambienteTexto h1 {
+    font-size: 40px;
+}
+
+#ambienteAconchegante #ambienteTexto p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#ambienteAconchegante #ambienteBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 80%;
+}
+
+#ambienteAconchegante #ambienteBox img {
+    width: 37%;
+    border-radius: 10px;
+    /* box-shadow: #91969c 0px 5px 15px; */
+}
+
+#ambienteAconchegante #ambienteBox div {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+    gap: 20px;
+}
+
+#ambienteAconchegante #ambienteBox div h4 {
+    font-weight: 500;
+    font-size: 23px;
+}
+
+#ambienteAconchegante #ambienteBox div p {
+    font-size: 20px;
+}
+
+#ambienteAconchegante #ambienteBox div button {
+    width: max-content;
+    padding: 10px 25px;
+    font-size: 22px;
+    border-radius: 30px;
+    background-color: #91969c;
+    color: rgb(29, 28, 26);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#ambienteAconchegante #ambienteBox div button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #91969c;
 }
