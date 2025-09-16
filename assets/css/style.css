@@ -785,6 +785,12 @@ hr {
     color: #000;
     padding: 25px;
     border-radius: 10px;
+    transition: box-shadow 0.4s ease, scale 0.4s ease;
+}
+
+#horarioFuncionamento #horarioBox:hover {
+    box-shadow: 0 0 10px #91969c;
+    scale: 1.02;
 }
 
 #horarioFuncionamento #horarioBox h2 {
@@ -814,6 +820,7 @@ hr {
     color: #283e5a;
 }
 /* fim da section "horarioFuncionamento" */
+
 
 /* começo da section "facaReserva" */
 #facaReserva {
@@ -867,3 +874,6 @@ hr {
     box-shadow: 0 0 10px #283e5a;
 }
 /* fim da section "facaReserva" */
+/* ======================== FIM DA PÁGINA "ESPAÇO" =========================== */
+
+/*  */
