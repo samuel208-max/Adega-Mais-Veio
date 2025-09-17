@@ -897,6 +897,7 @@ hr {
     font-weight: 500;
 }
 
+/* ===================== COMEÇO DA SECTION "HISTORIA" ===================== */
 #historia {
     padding: 100px 0;
     background-color: rgb(10, 9, 9);
@@ -1009,3 +1010,77 @@ hr {
 #historia #timeline .boxTimelineDireita::before {
     left: calc(46% + 5px);
 }
+/* ===================== FIM DA SECTION "HISTORIA" ===================== */
+
+/* ==================== COMEÇO DA SECTION "nossosValores" */
+#nossosValores {
+    padding: 80px 0;
+    background-color: #2b2a2a;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+#nossosValores #valoresTitulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+}
+
+#nossosValores #valoresTitulo h1 {
+    font-size: 40px;
+}
+
+#nossosValores #valoresTitulo p {
+    font-size: 20px;
+}
+
+#nossosValores #valoresConteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+}
+
+#nossosValores #valoresConteudo #boxValores1,
+#nossosValores #valoresConteudo #boxValores2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#nossosValores #valoresConteudo .boxValores {
+    background-color: #283e5a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    transition: box-shadow 0.4s ease, scale 0.4s ease;
+}
+
+#nossosValores #valoresConteudo .boxValores:hover {
+    box-shadow: 0 0 10px #5993df;
+    scale: 1.02;
+    cursor: default;
+}
+
+#nossosValores #valoresConteudo .boxValores i {
+    font-size: 50px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+#nossosValores #valoresConteudo .boxValores h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#nossosValores #valoresConteudo .boxValores p {
+    font-size: 19px;
+}
+/* ==================== FIM DA SECTION "nossosValores" */
