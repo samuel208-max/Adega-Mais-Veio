@@ -124,7 +124,7 @@ body {
 #hero div h1 {
     font-size: 45px;
     font-family: 'Playfair Display', serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #hero div p {
@@ -1263,3 +1263,48 @@ hr {
     box-shadow: 0 0 10px #283e5a;
 }
 /* =================== FIM DA SECTION "missaoVisaoValores" */
+/* ========================= FIM DA PÁGINA "SOBRE NÓS" =================== */
+
+/* ========================= INÍCIO DA PÁGINA "CONTATO" =================== */
+/* ========================= COMEÇO DA SECTION "hero" ===================== */
+#heroContato {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.awsli.com.br/600x450/572/572835/produto/209583011/screenshot-produto-mercadolivre-com-br-2020-04_clipped_rev_2-fpzlnt.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 120px;
+    text-align: center;
+    color: aliceblue;
+}
+
+#heroContato div {
+    width: 40%;
+    margin: 0 auto;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#heroContato div h1 {
+    font-size: 45px;
+    font-family: '5Playfair Display', serif;
+    font-weight: 200;
+}
+
+#heroContato div p {
+    font-size: 20px;
+}
+/* ========================= FIM DA SECTION "hero" ===================== */
+/* ========================= COMEÇO DA SECTION "contatoFormulario" ===================== */
+#contatoConteudo {
+    padding: 100px 0;
+    background-color: rgb(10, 9, 9);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
