@@ -1303,8 +1303,95 @@ hr {
     background-color: rgb(10, 9, 9);
     color: aliceblue;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
+#contatoConteudo #contatoInformacoes {
+    background-color: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+#contatoConteudo #contatoInformacoes #InformacoesTitulo {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#contatoConteudo #contatoInformacoes .informacoesBox {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#contatoConteudo #contatoInformacoes .informacoesBox div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contatoConteudo #contatoInformacoes .informacoesBox div i {
+    font-size: 25px;
+    padding: 15px;
+    background-color: rgb(29, 28, 26);
+    border-radius: 50%;
+    color: #fff;
+}
+
+#contatoConteudo #contatoInformacoes .informacoesBox div h4 {
+    font-size: 25px;
+    font-weight: 700;
+} 
+
+#contatoConteudo #contatoInformacoes .informacoesBox p {
+    font-size: 17px;
+    margin-left: 65px;
+    margin-top: 5px;
+}
+
+#contatoConteudo #contatoInformacoes #contatoHorarios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#contatoConteudo #contatoInformacoes #contatoHorarios h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#contatoConteudo #contatoInformacoes #contatoHorarios ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contatoConteudo #contatoInformacoes #contatoHorarios ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-right: 20px;
+    border-bottom: 1px solid #796a6a;
+    padding-bottom: 5px;
+}
+
+#contatoConteudo #contatoFormulario {
+    background-color: #2b2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+#contatoConteudo #contatoFormulario #formularioTitulo {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
