@@ -278,6 +278,26 @@ function mostrarFormularioAgendamento(narguile) {
         overlay.remove();
 
         // Aqui você pode salvar no localStorage ou exibir um toast
-        alert("Agendamento realizado com sucesso!");
+        const toastAgendamento = document.createElement('div')
+        toastAgendamento.className = "overlay"
+
+        const divConfirmacao = document.createElement('div')
+        divConfirmacao.className = "divConfirmacao"
+
+        const confirmacaoAgendamento = document.createElement('h3')
+        confirmacaoAgendamento.textContent = "Agendamento realizado com sucesso!"
+
+        const buttonOk = document.createElement('button')
+        buttonOk.textContent = "Ok!"
+
+        divConfirmacao.appendChild(confirmacaoAgendamento)
+        divConfirmacao.appendChild(buttonOk)
+        toastAgendamento.appendChild(divConfirmacao)
+        document.body.appendChild(toastAgendamento)
+
+        buttonOk.addEventListener('click', () => {
+            toastAgendamento.remove()
+        })
+
     });
 }
