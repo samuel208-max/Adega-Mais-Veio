@@ -4,8 +4,11 @@ const essencias = document.getElementById('essencias');
 const carvoes = document.getElementById('carvoes');
 const diversos = document.getElementById('diversos');
 const combosNarguile = document.getElementById('combosNarguile');
+const nomeCategoria = document.getElementById('nomeCategoria')
 
 function atualizarAcessorios() {
+    nomeCategoria.innerHTML = "Acessórios"
+
     visualizacaoAcessorios.innerHTML = ""; // limpa a lista antes de adicionar
 
     narguileAcessorios.forEach((acessorio) => {
@@ -68,6 +71,8 @@ function atualizarAcessorios() {
 }
 
 function filtrarPorCategoria(categoria) {
+    nomeCategoria.innerHTML = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+
     visualizacaoAcessorios.innerHTML = ""
 
     const filtrados = narguileAcessorios.filter(produto => produto.categoria === categoria);
@@ -133,25 +138,42 @@ function filtrarPorCategoria(categoria) {
 
 essencias.addEventListener('click', () => {
     filtrarPorCategoria('essencia');
+    ativarBotaoClicado(essencias)
 });
 
 carvoes.addEventListener('click', () => {
     filtrarPorCategoria('carvao');
+    ativarBotaoClicado(carvoes)
 });
 
 diversos.addEventListener('click', () => {
     filtrarPorCategoria('outros');
+    ativarBotaoClicado(diversos)
 });
 
 combosNarguile.addEventListener('click', () => {
     filtrarPorCategoria('combo');
+    ativarBotaoClicado(combosNarguile)
 });
 
 todos.addEventListener('click', () => {
     atualizarAcessorios()
+    ativarBotaoClicado(todos)
 })
 
 atualizarAcessorios()
+todos.classList.add('ativo');
+
+
+const botoesCategoria = [todos, essencias, carvoes, diversos, combosNarguile];
+
+function ativarBotaoClicado(botaoAtivo) {
+    botoesCategoria.forEach(botao => {
+        botao.classList.remove('ativo');
+    });
+    botaoAtivo.classList.add('ativo');
+}
+
 
 
 // ================================ SECTION "alugarNarguiles" ======================
@@ -192,7 +214,70 @@ function atualizarNarguiles() {
         div.appendChild(button);
         liNarguile.appendChild(div);
         visualizacaoNarguiles.appendChild(liNarguile);
+
+        button.addEventListener('click', () => {
+            mostrarFormularioAgendamento(narguile);
+        });
     })
 }
 
 atualizarNarguiles()
+
+function mostrarFormularioAgendamento(narguile) {
+    // Cria o fundo escuro
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+
+    // Cria o formulário
+    const formContainer = document.createElement('div');
+    formContainer.className = 'form-agendamento';
+
+    formContainer.innerHTML = `
+        <h2>Agendar Narguilé: ${narguile.nome}</h2>
+        <form id="formAgendamento">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+
+            <label>Telefone:</label>
+            <input type="tel" name="telefone" required>
+
+            <label>Data:</label>
+            <input type="date" name="data" required>
+
+            <label>Horário:</label>
+            <input type="time" name="hora" required>
+
+            <label>Observações:</label>
+            <textarea name="observacoes"></textarea>
+
+            <button type="submit">Confirmar Agendamento</button>
+            <button type="button" id="cancelarAgendamento">Cancelar</button>
+        </form>
+    `;
+
+    // Adiciona no body
+    overlay.appendChild(formContainer);
+    document.body.appendChild(overlay);
+
+    // Cancelar agendamento
+    document.getElementById('cancelarAgendamento').addEventListener('click', () => {
+        overlay.remove();
+    });
+
+    // Enviar agendamento
+    document.getElementById('formAgendamento').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const dados = Object.fromEntries(new FormData(e.target));
+
+        console.log("Agendamento:", {
+            narguile: narguile.nome,
+            ...dados
+        });
+
+        overlay.remove();
+
+        // Aqui você pode salvar no localStorage ou exibir um toast
+        alert("Agendamento realizado com sucesso!");
+    });
+}

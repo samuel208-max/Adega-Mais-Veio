@@ -3,8 +3,11 @@ const bebidas = document.getElementById('bebidas')
 const comidas = document.getElementById('comidas')
 const combos = document.getElementById('combos')
 const tudo = document.getElementById('tudo')
+const nomeCategoria = document.getElementById('nomeCategoria')
 
 function atualizarCardapio() {
+    nomeCategoria.innerHTML = "Produtos"
+
     ul.innerHTML = ""
     produtos.forEach((produto) => {
         const li = document.createElement('li')
@@ -70,6 +73,9 @@ function atualizarCardapio() {
 }
 
 function filtrarPorCategoria(categoria) {
+
+    nomeCategoria.innerHTML = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+
     ul.innerHTML = ""; // limpa os itens
 
     const filtrados = produtos.filter(produto => produto.categoria === categoria);
@@ -134,16 +140,33 @@ function filtrarPorCategoria(categoria) {
 
 bebidas.addEventListener('click', () => {
     filtrarPorCategoria('bebida');
+    ativarBotaoClicado(bebidas)
 });
 
 comidas.addEventListener('click', () => {
     filtrarPorCategoria('comida');
+    ativarBotaoClicado(comidas)
 });
 
 combos.addEventListener('click', () => {
     filtrarPorCategoria('combo');
+    ativarBotaoClicado(combos)
 });
 
-tudo.addEventListener('click', atualizarCardapio);
+tudo.addEventListener('click', () => {
+    atualizarCardapio();
+    ativarBotaoClicado(tudo);
+});
 
 atualizarCardapio()
+tudo.classList.add('ativo');
+
+
+const botoesCategoria = [tudo, bebidas, comidas, combos];
+
+function ativarBotaoClicado(botaoAtivo) {
+    botoesCategoria.forEach(botao => {
+        botao.classList.remove('ativo');
+    });
+    botaoAtivo.classList.add('ativo');
+}
