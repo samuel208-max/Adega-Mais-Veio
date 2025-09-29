@@ -91,10 +91,12 @@ body {
 }
 
 
+#cabecalho-carrinho, 
 #lista-carrinho {
     padding-right: 100px;
 }
 
+#cabecalho-carrinho li,
 #lista-carrinho li {
     cursor: pointer;
 }
@@ -1009,6 +1011,7 @@ hr {
 #historia #timeline .boxTimelineDireita::before {
     left: calc(46% + 5px);
 }
+
 /* ===================== FIM DA SECTION "HISTORIA" ===================== */
 
 /* ==================== COMEÇO DA SECTION "nossosValores" */
@@ -1082,6 +1085,7 @@ hr {
 #nossosValores #valoresConteudo .boxValores p {
     font-size: 19px;
 }
+
 /* ==================== FIM DA SECTION "nossosValores" */
 
 /* ==================== COMEÇO DA SECTION "nossaEquipe" */
@@ -1174,6 +1178,7 @@ hr {
     color: #283e5a;
     transform: scale(1.2);
 }
+
 /* ==================== FIM DA SECTION "nossaEquipe" */
 
 /* =================== COMEÇO DA SECTION "missaoVisaoValores" */
@@ -1262,6 +1267,7 @@ hr {
     transform: scale(1.1);
     box-shadow: 0 0 10px #283e5a;
 }
+
 /* =================== FIM DA SECTION "missaoVisaoValores" */
 /* ========================= FIM DA PÁGINA "SOBRE NÓS" =================== */
 
@@ -1296,8 +1302,9 @@ hr {
 #heroContato div p {
     font-size: 20px;
 }
+
 /* ========================= FIM DA SECTION "hero" ===================== */
-/* ========================= COMEÇO DA SECTION "contatoFormulario" ===================== */
+/* ========================= COMEÇO DA SECTION "contatoConteudo" ===================== */
 #contatoConteudo {
     padding: 100px 0;
     background-color: rgb(10, 9, 9);
@@ -1308,6 +1315,7 @@ hr {
     gap: 50px;
 }
 
+/* ========================= COMEÇO DA DIV "contatoInformacoes" ==================== */
 #contatoConteudo #contatoInformacoes {
     background-color: #2b2a2a;
     display: flex;
@@ -1346,7 +1354,7 @@ hr {
 #contatoConteudo #contatoInformacoes .informacoesBox div h4 {
     font-size: 25px;
     font-weight: 700;
-} 
+}
 
 #contatoConteudo #contatoInformacoes .informacoesBox p {
     font-size: 17px;
@@ -1383,6 +1391,9 @@ hr {
     padding-bottom: 5px;
 }
 
+/* ========================= FIM DA DIV "contatoInformacoes" ==================== */
+
+/* ========================= COMEÇO DA DIV "contatoFormulario" ==================== */
 #contatoConteudo #contatoFormulario {
     background-color: #2b2a2a;
     padding: 30px;
@@ -1394,4 +1405,487 @@ hr {
     font-size: 25px;
     margin-bottom: 20px;
     font-weight: 800;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo label {
+    font-size: 18px;
+    text-align: left;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo input,
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #1f1b1b;
+    color: #ede7e7;
+    resize: none;
+    transition: box-shadow 0.3s ease, outline 0.3s ease;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo input:focus,
+#contatoConteudo #contatoFormulario #formularioContato .formulariocampo textarea:focus {
+    outline: 1px solid #283e5a;
+    box-shadow: 0 0 10px #283e5a;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato #enviarContato {
+    width: fit-content;
+    padding: 20px 30px;
+    font-size: 18px;
+    background-color: #283e5a;
+    border: none;
+    color: #f0e5e5;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+#contatoConteudo #contatoFormulario #formularioContato #enviarContato:hover {
+    background-color: #486489;
+    cursor: pointer;
+    transform: scale(1.06);
+    box-shadow: 0 0 10px #486489;
+}
+
+/* ========================= FIM DA DIV "contatoFormulario" ==================== */
+/* ========================= FIM DA SECTION "contatoConteudo" ==================== */
+
+/* ========================= COMEÇO DA SECTION "nossaLocalizacao" ==================== */
+#nossaLocalizacao {
+    padding: 100px 0;
+    background-color: #2b2a2a;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#nossaLocalizacao #localizacaoTitulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+#nossaLocalizacao #localizacaoTitulo h1 {
+    font-size: 40px;
+}
+
+#nossaLocalizacao #localizacaoTitulo p {
+    font-size: 20px;
+}
+
+/* ========================= FIM DA SECTION "nossaLocalizacao" ==================== */
+
+/* ========================= COMEÇO DA SECTION "perguntasFrequentes" ==================== */
+#perguntasFrequentes {
+    padding: 100px 0;
+    background-color: rgb(10, 9, 9);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#perguntasFrequentes #perguntasTitulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+#perguntasFrequentes #perguntasTitulo h1 {
+    font-size: 40px;
+}
+
+#perguntasFrequentes #perguntasTitulo p {
+    font-size: 20px;
+}
+
+#perguntasFrequentes #perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+#perguntasFrequentes #perguntas .pergunta {
+    background-color: #2b2a2a;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#perguntasFrequentes #perguntas .pergunta:hover {
+    cursor: pointer;
+}
+
+/* estilo para ícone do Font Awesome nas FAQs */
+#perguntasFrequentes #perguntas .pergunta summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#perguntasFrequentes #perguntas .pergunta summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-arrow {
+    transition: transform 0.25s ease;
+    font-size: 18px;
+    color: #f0e5e5;
+}
+
+.pergunta[open] .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: auto;
+}
+
+/* ========================= FIM DA SECTION "perguntasFrequentes" ==================== */
+
+/* ========================= COMEÇO DA SECTION "sigaNos" ==================== */
+#sigaNos {
+    padding: 100px 0;
+    background-color: #2b2a2a;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#sigaNos #sigaNosTitulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+#sigaNos #sigaNosTitulo h1 {
+    font-size: 40px;
+}
+
+#sigaNos #sigaNosTitulo p {
+    font-size: 20px;
+}
+
+#sigaNos #sigaNosRedes {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+#sigaNos #sigaNosRedes li i {
+    font-size: 30px;
+    padding: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#sigaNos #sigaNosRedes li i:hover {
+    background-color: #181b1f;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* ========================= FIM DA SECTION "sigaNos" ==================== */
+/* ========================= FIM DA PÁGINA "contato" ==================== */
+
+
+/* ========================== PAGINA CARDAPIO E NARGUILE(TUDO BAGUNÇA, ARRUMAR NO FINAL DO PROJETO) */
+#carrinho {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    height: 100%;
+    width: 250px;
+    background-color: #2b2a2a;
+    z-index: 1000;
+}
+
+#topoCarrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#topoCarrinho h2 {
+    font-size: 25px;
+    color: #ff982d;
+}
+
+#fechar-carrinho {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    margin-top: 5px !important;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #ff4d4d;
+    transition: color 0.4s ease;
+}
+
+#fechar-carrinho:hover {
+    color: #9d1515;
+}
+
+#listaCarrinho {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.li_carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+}
+
+.li_carrinho .divQuantidade {
+    display: flex;
+    gap: 10px;
+}
+
+.li_carrinho .divQuantidade p {
+    font-size: 20px;
+}
+
+.li_carrinho .divQuantidade .removerQuantidade {
+    background-color: red;
+    color: aliceblue;
+    font-weight: 600;
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.li_carrinho .divQuantidade .removerQuantidade:hover {
+    background-color: rgb(124, 12, 12);
+}
+
+.li_carrinho .divQuantidade .quantidade {
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.li_carrinho .divQuantidade .adicionarQuantidade {
+    background-color: rgb(21, 190, 21);
+    color: aliceblue;
+    font-weight: 600;
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.li_carrinho .divQuantidade .adicionarQuantidade:hover {
+    background-color: green;
+}
+
+#carrinho #total {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+#carrinho #total #totalCarrinho {
+    font-size: 25px;
+    color: #ff982d;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+#carrinho #total #finalizarCompra {
+    padding: 10px 15px;
+    background-color: #ff982d;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, scale 0.3s ease;
+}
+
+#carrinho #total #finalizarCompra:hover {
+    background-color: rgb(185, 119, 26);
+    color: #fff;
+    scale: 1.05;
+    cursor: pointer;
+}
+
+nav #menuCardapio {
+    display: flex;
+    background-color: #1f1c1c;
+    color: aliceblue;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    border-bottom: 1px solid #ede7e7;
+}
+
+nav #menuCardapio li {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#produtos,
+#AcessoriosNarguile {
+    background-color: #000;
+    padding: 80px 0;
+}
+
+.visualizacaoProdutos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.visualizacaoProdutos li {
+    width: 25%;
+    background-color: #3B3B3B;
+    border-radius: 10px;
+}
+
+.visualizacaoProdutos li .boxProduto img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.visualizacaoProdutos li .boxProduto .divTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.visualizacaoProdutos li .boxProduto h3,
+.visualizacaoProdutos li .boxProduto h4 {
+    font-size: 20px;
+}
+
+.visualizacaoProdutos li .boxProduto p {
+    font-size: 17px;
+}
+
+.visualizacaoProdutos li .boxProduto .botaoAdicionar {
+    background-color: #ff982d;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 7px 0;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease, scale 0.3s ease;
+}
+
+.visualizacaoProdutos li .boxProduto .botaoAdicionar:hover {
+    background-color: rgb(185, 119, 26);
+    color: #fff;
+    scale: 1.05;
+}
+
+.toastAdicionado, .toastRemovido {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-weight: 600;
+    background-color: #333;
+    color: rgb(34, 197, 34);
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0.95;
+    animation: fadeInOut 3s ease;
+    z-index: 2000;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#alugarNarguiles {
+    padding: 80px 0;
+    background-color: #2b2a2a;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#alugarNarguiles h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
 }

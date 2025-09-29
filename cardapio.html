@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Adega mais Véio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <a href="#" id="logo"><span>Adega Mais véio</span></a>
+
+        <ul id="lista">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="espaco.html">Espaço</a></li>
+            <li><a href="narguile.html">Narguilé</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+        <ul id="cabecalho-carrinho">
+            <li><i class="fas fa-search"></i></li>
+            <li><i class="fas fa-shopping-cart" id="abrirCarrinho"></i></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="heroContato">
+            <div>
+                <h1>Cardápio</h1>
+            </div>
+        </section>
+
+        <aside id="carrinho">
+            <div id="topoCarrinho">
+                <h2>Carrinho</h2>
+                <button id="fechar-carrinho"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <ul id="listaCarrinho"></ul>
+
+            <div id="total">
+                <p id="totalCarrinho"></p>
+                <button id="finalizarCompra">Finalizar Compra</button>
+            </div>
+        </aside>
+
+
+        <nav>
+            <ul id="menuCardapio">
+                <li id="tudo">Tudo</li>
+                <li id="bebidas">Bebidas</li>
+                <li id="comidas">Comidas</li>
+                <li id="combos">Combos</li>
+            </ul>
+        </nav>
+
+        <section id="produtos">
+            <ul class="visualizacaoProdutos" id="visualizacaoCardapio"></ul>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <div id="tudoRodape">
+            <div id="sobreRodape">
+                <span>logo</span>
+                <p>Um espaço aconchegante para relaxar, socializar e desfrutar das melhores bebidas e comidas</p>
+                <ul id="redesSociais">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-whatsapp"></i></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Links Rápidos</h2>
+                <ul class="LinksSuporte">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="espaco.html">Espaço</a></li>
+                    <li><a href="narguile.html">Narguilé</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Suporte</h2>
+                <ul class="LinksSuporte">
+                    <li><a href="sobreNos.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#">FAQ</a></li> <!-- IDEIA, VER COMO FAZER UM FAQ -->
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p id="Copyright">&copy; 2025 Adega mais Véio - Todos os direitos reservados.</p>
+    </footer>
+    <script src="./assets/js/produtos.js"></script>
+    <script src="./assets/js/carrinho.js"></script>
+    <script src="./assets/js/cardapio.js"></script>
+</body>
+
+</html>

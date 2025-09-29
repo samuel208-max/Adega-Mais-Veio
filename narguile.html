@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narguile - Adega mais Véio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <a href="#" id="logo"><span>Adega Mais véio</span></a>
+
+        <ul id="lista">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="espaco.html">Espaço</a></li>
+            <li><a href="narguile.html">Narguilé</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+        <ul id="lista-carrinho">
+            <li><i class="fas fa-search"></i></li>
+            <li><i class="fas fa-shopping-cart" id="abrirCarrinho"></i></li>
+        </ul>
+    </header>
+
+    <aside id="carrinho">
+        <div id="topoCarrinho">
+            <h2>Carrinho</h2>
+            <button id="fechar-carrinho"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <ul id="listaCarrinho"></ul>
+
+        <div id="total">
+            <p id="totalCarrinho"></p>
+            <button id="finalizarCompra">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <main>
+        <section id="heroContato">
+            <div>
+                <h1>Narguilé</h1>
+            </div>
+        </section>
+
+        <nav>
+            <ul id="menuCardapio">
+                <li id="todos">Todos</li>
+                <li id="essencias">Essencias</li>
+                <li id="carvoes">Carvões</li>
+                <li id="diversos">Diversos</li>
+                <li id="combosNarguile">Combos</li>
+            </ul>
+        </nav>
+
+        <section id="AcessoriosNarguile">
+            <h1 style="color: aliceblue; text-align: center; font-size: 40px; margin-bottom: 30px;">Acessorios</h1>
+            <ul class="visualizacaoProdutos" id="visualizacaoAcessorios"></ul>
+        </section>
+
+        <section id="alugarNarguiles">
+            <h1>Aluguel de Narguilés</h1>
+            <ul class="visualizacaoProdutos" id="visualizacaoNarguiles"></ul>
+        </section>
+    </main>
+    <script src="./assets/js/produtos.js"></script>
+    <script src="./assets/js/carrinho.js"></script>
+    <script src="./assets/js/narguile.js"></script>
+</body>
+
+</html>

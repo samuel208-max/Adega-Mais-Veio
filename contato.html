@@ -18,9 +18,9 @@
 
         <ul id="lista">
             <li><a href="index.html">Início</a></li>
-            <li><a href="#">Cardápio</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
             <li><a href="espaco.html">Espaço</a></li>
-            <li><a href="#">Narguilé</a></li>
+            <li><a href="narguile.html">Narguilé</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
@@ -84,34 +84,172 @@
 
             <div id="contatoFormulario">
                 <h3 id="formularioTitulo">Envie uma Mensagem</h3>
-                <form action="#" method="post">
-                    <div id="formularioCampos">
-                        <div class="formulariocampo">
-                            <label for="nome">Nome completo</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-
-                        <div class="formulariocampo">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="formulariocampo">
-                            <label for="assunto">Assunto</label>
-                            <input type="text" id="assunto" name="assunto" required>
-                        </div>
-
-                        <div class="formulariocampo">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" required></textarea>
-                        </div>
-
-                        <button type="submit">Enviar mensagem</button>
+                <form action="#" method="post" id="formularioContato">
+                    <div class="formulariocampo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required>
                     </div>
+
+                    <div class="formulariocampo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="formulariocampo">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+
+                    <div class="formulariocampo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required rows="7"></textarea>
+                    </div>
+
+                    <button type="submit" id="enviarContato">Enviar mensagem</button>
                 </form>
             </div>
         </section>
+
+        <section id="nossaLocalizacao">
+            <div id="localizacaoTitulo">
+                <h1>Nossa Localização</h1>
+                <p>Venha nos visitar em nossa adega</p>
+            </div>
+
+            <div>mapa</div>
+        </section>
+
+        <section id="perguntasFrequentes">
+            <div id="perguntasTitulo">
+                <h1>Perguntas Frequentes</h1>
+                <p>Tire suas dúvidas sobre nossa adega</p>
+            </div>
+            <div id="perguntas">
+                <details class="pergunta">
+                    <summary>Preciso fazer reserva com antecedência? <i class="fas fa-chevron-down faq-arrow"></i>
+                    </summary>
+                    <p class="faq-content">Para grupos menores (até 4 pessoas), normalmente não é necessário reserva.
+                        Para grupos maiores ou
+                        durante finais de semana, recomendamos fazer reserva com pelo menos 24h de antecedência.</p>
+                </details>
+
+                <details class="pergunta">
+                    <summary>Vocês aceitam cartões de crédito e débito? <i class="fas fa-chevron-down faq-arrow"></i>
+                    </summary>
+                    <p class="faq-content">Sim, aceitamos todas as bandeiras de cartão de crédito e débito. Também
+                        aceitamos PIX e dinheiro.
+                    </p>
+                </details>
+
+                <details class="pergunta">
+                    <summary>Há estacionamento disponível? <i class="fas fa-chevron-down faq-arrow"></i></summary>
+                    <p class="faq-content">Não temos estacionamento próprio, mas há vários estacionamentos próximos. O
+                        mais próximo fica a
+                        100m
+                        da nossa entrada, na Rua das Flores, 456.</p>
+                </details>
+
+                <details class="pergunta">
+                    <summary>Vocês fazem delivery? <i class="fas fa-chevron-down faq-arrow"></i></summary>
+                    <p class="faq-content">Sim, fazemos delivery através dos aplicativos iFood e Uber Eats, pode fazer
+                        seu pedido aqui pelo
+                        site
+                        mesmo. Também aceitamos pedidos por
+                        WhatsApp para entregas diretas.</p>
+                </details>
+
+                <details class="pergunta">
+                    <summary>Há opções vegetarianas/veganas no cardápio? <i class="fas fa-chevron-down faq-arrow"></i>
+                    </summary>
+                    <p class="faq-content">Sim, temos várias opções vegetarianas e algumas veganas. Nosso cardápio
+                        possui identificação para
+                        facilitar sua escolha.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="sigaNos">
+            <div id="sigaNosTitulo">
+                <h1>Siga-nos nas Redes Sociais</h1>
+                <p>Acompanhe nossas novidades e promoções</p>
+            </div>
+
+            <ul id="sigaNosRedes">
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-whatsapp"></i></li>
+            </ul>
+        </section>
     </main>
+
+    <footer id="rodape">
+        <div id="tudoRodape">
+            <div id="sobreRodape">
+                <span>logo</span>
+                <p>Um espaço aconchegante para relaxar, socializar e desfrutar das melhores bebidas e comidas</p>
+                <ul id="redesSociais">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-whatsapp"></i></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Links Rápidos</h2>
+                <ul class="LinksSuporte">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="espaco.html">Espaço</a></li>
+                    <li><a href="narguile.html">Narguilé</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Suporte</h2>
+                <ul class="LinksSuporte">
+                    <li><a href="sobreNos.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#">FAQ</a></li> <!-- IDEIA, VER COMO FAZER UM FAQ -->
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p id="Copyright">&copy; 2025 Adega mais Véio - Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script>
+        document.querySelectorAll("details.pergunta").forEach((detail) => {
+            const content = detail.querySelector(".faq-content");
+
+            // Abre com animação
+            detail.addEventListener("toggle", () => {
+                if (detail.open) {
+                    // Abrindo: anima a altura
+                    const height = content.scrollHeight;
+                    content.style.height = height + "px";
+
+                    // Depois de expandir, deixa auto (caso o conteúdo mude)
+                    setTimeout(() => {
+                        content.style.height = "auto";
+                    }, 800); // igual ao tempo da transição
+                } else {
+                    // Fechando: volta o height pra animar o fechamento
+                    const height = content.scrollHeight;
+                    content.style.height = height + "px";
+
+                    // Força o reflow e então zera
+                    requestAnimationFrame(() => {
+                        content.style.height = "0px";
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
