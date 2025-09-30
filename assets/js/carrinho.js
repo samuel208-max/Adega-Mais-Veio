@@ -8,11 +8,33 @@ let produtosCarrinho = JSON.parse(localStorage.getItem('carrinho')) || []
 
 abrirCarrinho.addEventListener('click', () => {
     carrinho.style.display = "block"
+    atualizarCarrinho()
 })
 
+fecharCarrinho.addEventListener('click', () => {
+    carrinho.style.display = "none"
+})
+
+// Função para atualizar o contador de itens no carrinho
+function atualizarContadorCarrinho() {
+    const totalItens = produtosCarrinho.reduce((acc, item) => acc + item.quantidade, 0)
+
+    let contagemCarrinho = document.querySelector('.contagemCarrinho')
+
+    if (!contagemCarrinho) {
+        contagemCarrinho = document.createElement('p')
+        contagemCarrinho.className = 'contagemCarrinho'
+        
+        abrirCarrinho.appendChild(contagemCarrinho)
+    }
+
+    contagemCarrinho.textContent = totalItens
+}
+
+// Função principal que renderiza os itens no carrinho
 function atualizarCarrinho() {
     ulCarrinho.innerHTML = ''
-    let total = 0;
+    let total = 0
 
     produtosCarrinho.forEach((produto, index) => {
         const li_carrinho = document.createElement('li')
@@ -38,7 +60,7 @@ function atualizarCarrinho() {
             produto.quantidade -= 1
 
             if (produto.quantidade <= 0) {
-                produtosCarrinho.splice(index, 1); // remove do carrinho
+                produtosCarrinho.splice(index, 1)
             }
 
             const toastRemovido = document.createElement('div')
@@ -53,8 +75,8 @@ function atualizarCarrinho() {
                 toastRemovido.remove()
             }, 3000)
 
-            localStorage.setItem('carrinho', JSON.stringify(produtosCarrinho));
-            atualizarCarrinho();
+            localStorage.setItem('carrinho', JSON.stringify(produtosCarrinho))
+            atualizarCarrinho()
         })
 
         const quantidade = document.createElement('p')
@@ -66,7 +88,7 @@ function atualizarCarrinho() {
         adicionarQuantidade.textContent = "+"
 
         adicionarQuantidade.addEventListener('click', () => {
-            produto.quantidade += 1;
+            produto.quantidade += 1
 
             const toastAdicionado = document.createElement('div')
             const adicionadoTexto = document.createElement('p')
@@ -79,9 +101,9 @@ function atualizarCarrinho() {
                 toastAdicionado.remove()
             }, 3000)
 
-            localStorage.setItem('carrinho', JSON.stringify(produtosCarrinho));
-            atualizarCarrinho();
-        });
+            localStorage.setItem('carrinho', JSON.stringify(produtosCarrinho))
+            atualizarCarrinho()
+        })
 
         total += produto.preco * produto.quantidade
 
@@ -94,10 +116,13 @@ function atualizarCarrinho() {
         li_carrinho.appendChild(divQuantidade)
         ulCarrinho.appendChild(li_carrinho)
     })
+
     localStorage.setItem('carrinho', JSON.stringify(produtosCarrinho))
     totalCarrinho.textContent = `Total: R$${total.toFixed(2)}`
+    atualizarContadorCarrinho()
 }
 
-fecharCarrinho.addEventListener('click', () => {
-    carrinho.style.display = "none"
+// Atualiza carrinho e contador quando a página carrega
+window.addEventListener('DOMContentLoaded', () => {
+    atualizarCarrinho()
 })

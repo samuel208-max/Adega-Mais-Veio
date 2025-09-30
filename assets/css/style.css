@@ -1693,6 +1693,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     color: aliceblue;
+    border-bottom: 1px solid #121418c2;
 }
 
 .li_carrinho .divQuantidade {
@@ -2019,4 +2020,23 @@ nav #menuCardapio li {
 
 .divConfirmacao button:hover {
     transform: scale(1.05);
+}
+
+.contagemCarrinho {
+    background-color: #ff982d;
+    color: #000;
+    position: relative;
+    font-weight: 900;
+    top: -35px;
+    font-family: "poppins", sans-serif;
+    right: -13px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    display: flex;
+    font-size: 16px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 5px 2px;
 }
