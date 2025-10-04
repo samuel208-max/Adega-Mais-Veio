@@ -27,9 +27,23 @@
 
         <ul id="lista-carrinho">
             <li><i class="fas fa-search"></i></li>
-            <li><i class="fas fa-shopping-cart"></i></li>
+            <li><i class="fas fa-shopping-cart" id="abrirCarrinho"></i></li>
         </ul>
     </header>
+
+    <aside id="carrinho">
+        <div id="topoCarrinho">
+            <h2>Carrinho</h2>
+            <button id="fechar-carrinho"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <ul id="listaCarrinho"></ul>
+
+        <div id="total">
+            <p id="totalCarrinho"></p>
+            <button id="finalizarCompra">Finalizar Compra</button>
+        </div>
+    </aside>
 
     <main>
         <section id="heroEspaco">
@@ -151,7 +165,7 @@
                 <p>Para grupos maiores ou ocasiões especiais, recomendamos fazer reserva com antecedência.</p>
                 <div id="reservaLinks">
                     <a href="">Fazer Reserva</a>
-                    <a href="">Entrar em Contato</a>
+                    <a href="contato.html">Entrar em Contato</a>
                 </div>
             </div>
         </section>
@@ -194,6 +208,7 @@
         <hr>
         <p id="Copyright">&copy; 2025 Adega mais Véio - Todos os direitos reservados.</p>
     </footer>
+    <script src="./assets/js/carrinho.js"></script>
 </body>
 
 </html>
