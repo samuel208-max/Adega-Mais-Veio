@@ -297,6 +297,12 @@ function mostrarFormularioAgendamento(narguile) {
 
         buttonOk.addEventListener('click', () => {
             toastAgendamento.remove()
+            DadosFormularioAgendamento.push({
+                narguile: narguile.nome,
+                ...dados
+            });
+
+            ProdutosAgendamento.push(narguile)
         })
 
     });

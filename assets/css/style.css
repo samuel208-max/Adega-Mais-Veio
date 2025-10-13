@@ -1627,7 +1627,7 @@ hr {
 
 /* ========================== PAGINA CARDAPIO E NARGUILE(TUDO BAGUNÇA, ARRUMAR NO FINAL DO PROJETO) */
 #agendamentos {
-    /* display: none; */
+    display: none;
     position: fixed;
     right: 0;
     top: 0;
@@ -1643,6 +1643,30 @@ hr {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+}
+
+#agendamentos #divLimparAgendamentos {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+#agendamentos #divLimparAgendamentos #limparAgendamentos {
+    padding: 10px;
+    font-size: 18px;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #ff982d;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, scale 0.3s ease;
+}
+
+#agendamentos #divLimparAgendamentos #limparAgendamentos:hover {
+    background-color: rgb(185, 119, 26);
+    color: #fff;
+    scale: 1.03;
+    cursor: pointer;
 }
 
 #carrinho {
@@ -1669,7 +1693,8 @@ hr {
     color: #ff982d;
 }
 
-#fechar-carrinho {
+#fechar-carrinho,
+#fechar-agendamento {
     background: transparent;
     border: none;
     font-size: 30px;
@@ -1680,7 +1705,8 @@ hr {
     transition: color 0.4s ease;
 }
 
-#fechar-carrinho:hover {
+#fechar-carrinho:hover,
+#fechar-agendamento:hover {
     color: #9d1515;
 }
 
